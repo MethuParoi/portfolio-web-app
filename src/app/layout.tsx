@@ -19,7 +19,7 @@ export default function RootLayout({
     //  <StoreProvider>
     <html lang="en">
       <body className="bg-black-100">
-        <main className=" md:px-0 md:mx-auto min-h-screen min-w-screen flex flex-col justify-between">
+        <main className=" md:px-0 md:mx-auto min-h-screen min-w-screen flex flex-col justify-between overflow-x-hidden">
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"

@@ -56,12 +56,16 @@ export const HeroDesc = () => {
           <Button
             label={"See my Projects"}
             onClick={() => router.push("/all-projects")}
+            type={"hero-btn"}
+            varient={"rocket"}
           />
           <Button
             label={"Download Resume"}
             onClick={() => {
               console.log("clicked");
             }}
+            type={"hero-btn"}
+            varient={"download"}
           />
           {/* <button
             onClick={() => router.push("/all-projects")}
