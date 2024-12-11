@@ -1,5 +1,9 @@
 import React from "react";
 import { Spotlight } from "../ui/Spotlight";
+import { HeroDesc } from "./HeroDesc";
+import Image from "next/image";
+import { BackgroundGradient } from "../ui/background-gradient";
+import { HeroImg } from "./HeroImg";
 
 const Hero = () => {
   return (
@@ -13,9 +17,13 @@ const Hero = () => {
       <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="blue" />
 
       {/* grid bg */}
-      <div className="h-screen w-full dark:bg-black-100  bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center">
-        {/* Radial gradient for the container to give a faded look */}
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+      <div className="w-full h-full flex justify-around items-center">
+        <div>
+          <HeroDesc />
+        </div>
+        <div>
+          <HeroImg />
+        </div>
       </div>
     </div>
   );
