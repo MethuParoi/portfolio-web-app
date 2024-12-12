@@ -1,4 +1,5 @@
 import Hero from "@/components/hero/Hero";
+import MyProjects from "@/components/my-projects/MyProjects";
 import TechStack from "@/components/tech-stack/TechStack";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { BiMessageDetail } from "react-icons/bi";
@@ -37,6 +38,7 @@ export default function Home() {
       />
       <Hero />
       <TechStack />
+      <MyProjects />
     </main>
   );
 }

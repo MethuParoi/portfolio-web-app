@@ -4,7 +4,7 @@ import "animate.css";
 
 const TechStack = () => {
   return (
-    <div className="mb-14 mt-4 md:my-14 ">
+    <div className="mb-14 md:mb-0 mt-4 md:mt-0 md:my-16 ">
       <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-[-30px] text-center animate__animated animate__fadeInUp animate__slow">
         My <span className=" text-teal-400">Tech Stack</span>
       </h1>

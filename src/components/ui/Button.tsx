@@ -1,5 +1,5 @@
 import { BiLogoTypescript } from "react-icons/bi";
-import { FaGitAlt, FaJs, FaReact } from "react-icons/fa";
+import { FaGitAlt, FaJs, FaLocationArrow, FaReact } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
 import { IoLogoNodejs } from "react-icons/io";
 import { IoLogoFirebase } from "react-icons/io5";
@@ -40,7 +40,11 @@ const Button = ({ label, onClick, type, varient }) => {
         <div>
           <button
             onClick={onClick}
-            className="relative inline-flex h-12 sm:h-14 w-30 sm:w-56 overflow-hidden rounded-full p-[1px]"
+            className={`relative inline-flex  overflow-hidden rounded-full p-[1px] ${
+              varient === "details"
+                ? "h-10 sm:h-12 w-30 sm:w-42"
+                : "h-12 sm:h-14 w-30 sm:w-56"
+            }`}
           >
             <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
             <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 hover:bg-[#393BB2] px-3 py-1 text-sm sm:text-lg font-medium text-teal-200 hover:text-white backdrop-blur-3xl">
@@ -48,6 +52,8 @@ const Button = ({ label, onClick, type, varient }) => {
               <span className="ml-2">
                 {varient === "rocket" ? (
                   <MdRocketLaunch className="text-xl" />
+                ) : varient === "details" ? (
+                  <FaLocationArrow className="text-xl" />
                 ) : (
                   <FiDownload className="text-xl" />
                 )}
