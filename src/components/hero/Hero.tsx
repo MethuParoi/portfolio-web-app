@@ -17,7 +17,7 @@ const Hero = () => {
       <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="blue" />
 
       {/* hero details */}
-      <div className="w-full lg:h-[65vh] flex md:flex-row flex-col justify-around items-center gap-y-10 md:gap-y-0 px-3 lg:px-0 pt-4 md:pt-10 xl:max-w-[1300px] pb-14">
+      <div className="w-full lg:h-[65vh] flex md:flex-row flex-col justify-around items-center gap-y-10 md:gap-y-0 px-3 lg:px-0 pt-4 md:pt-20 xl:max-w-[1300px] pb-14">
         <div>
           <HeroDesc />
         </div>

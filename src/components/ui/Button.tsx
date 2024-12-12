@@ -7,6 +7,7 @@ import { MdRocketLaunch } from "react-icons/md";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiExpress, SiMongodb, SiNextdotjs } from "react-icons/si";
 import "animate.css";
+import { TbBrandRedux } from "react-icons/tb";
 
 const Button = ({ label, onClick, type, varient }) => {
   const renderIcon = (varient) => {
@@ -29,8 +30,8 @@ const Button = ({ label, onClick, type, varient }) => {
         return <SiMongodb className="text-2xl sm:text-3xl" />;
       case "git":
         return <FaGitAlt className="text-2xl sm:text-3xl" />;
-      case "firebase":
-        return <IoLogoFirebase className="text-2xl sm:text-3xl" />;
+      case "redux":
+        return <TbBrandRedux className="text-2xl sm:text-3xl" />;
     }
   };
   switch (type) {
@@ -42,7 +43,7 @@ const Button = ({ label, onClick, type, varient }) => {
             className="relative inline-flex h-12 sm:h-14 w-30 sm:w-56 overflow-hidden rounded-full p-[1px]"
           >
             <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 hover:bg-[#393BB2] px-3 py-1 text-sm sm:text-lg font-medium text-white backdrop-blur-3xl">
+            <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 hover:bg-[#393BB2] px-3 py-1 text-sm sm:text-lg font-medium text-teal-200 hover:text-white backdrop-blur-3xl">
               {label}
               <span className="ml-2">
                 {varient === "rocket" ? (

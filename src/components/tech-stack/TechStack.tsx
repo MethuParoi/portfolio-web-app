@@ -25,11 +25,7 @@ const TechStack = () => {
           <Button label={"Next.js"} type={"tech-stack-btn"} varient={"next"} />
 
           <div className="sm:hidden">
-            <Button
-              label={"Firebase"}
-              type={"tech-stack-btn"}
-              varient={"firebase"}
-            />
+            <Button label={"Redux"} type={"tech-stack-btn"} varient={"redux"} />
           </div>
         </div>
         {/* row 2 */}
@@ -50,13 +46,8 @@ const TechStack = () => {
             varient={"express"}
           />
 
-          {/* Tailwind */}
-
-          <Button
-            label={"Tailwind"}
-            type={"tech-stack-btn"}
-            varient={"tailwind"}
-          />
+          {/* Redux */}
+          <Button label={"Redux"} type={"tech-stack-btn"} varient={"redux"} />
         </div>
         {/* row 3 */}
         <div className="flex items-center justify-center gap-x-10 gap-y-6 flex-wrap md:mt-8 mt-6">
@@ -68,13 +59,12 @@ const TechStack = () => {
 
           <Button label={"Git"} type={"tech-stack-btn"} varient={"git"} />
 
-          {/* Firebase */}
-
+          {/* Tailwind */}
           <div className="hidden sm:block">
             <Button
-              label={"Firebase"}
+              label={"Tailwind"}
               type={"tech-stack-btn"}
-              varient={"firebase"}
+              varient={"tailwind"}
             />
           </div>
         </div>
