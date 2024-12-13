@@ -1,25 +1,28 @@
 "use client";
 
-import { FaLocationArrow } from "react-icons/fa";
 import { BiLogoTypescript } from "react-icons/bi";
-import { FaGitAlt, FaJs, FaLocationArrow, FaReact } from "react-icons/fa";
-import { FiDownload } from "react-icons/fi";
+import { FaGitAlt, FaJs, FaReact } from "react-icons/fa";
 import { IoLogoNodejs } from "react-icons/io";
-import { IoLogoFirebase } from "react-icons/io5";
-import { MdRocketLaunch } from "react-icons/md";
 import { RiFirebaseFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiExpress, SiMongodb, SiNextdotjs } from "react-icons/si";
 import { SiDaisyui } from "react-icons/si";
 import { TbBrandRedux } from "react-icons/tb";
 import { PinContainer } from "../ui/3d-pin";
-import { ProjectCard } from "./ProjectCard";
 import Image from "next/image";
 import Button from "../ui/Button";
 import { useEffect, useState } from "react";
 import { getProjects } from "@/lib/api-projects";
 
 const MyProjects = () => {
-  const [projects, setProjects] = useState([]);
+  interface Project {
+    title: string;
+    siteLink: string;
+    image: string;
+    shortDescription: string;
+    technologyUsed: string[];
+  }
+
+  const [projects, setProjects] = useState<Project[]>([]);
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -30,7 +33,7 @@ const MyProjects = () => {
     fetchProjects();
   }, []);
 
-  const renderIcon = (varient) => {
+  const renderIcon = (varient: string) => {
     switch (varient) {
       case "react":
         return <FaReact className="text-2xl sm:text-3xl" />;

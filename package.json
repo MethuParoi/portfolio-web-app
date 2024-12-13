@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:ignore-types": "tsc --noEmit --skipLibCheck && next build"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.47.6",

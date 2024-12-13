@@ -1,4 +1,5 @@
-import { FaReact } from "react-icons/fa";
+"use client";
+
 import Button from "../ui/Button";
 import "animate.css";
 
@@ -14,29 +15,59 @@ const TechStack = () => {
         <div className="flex items-center justify-center gap-x-10 gap-y-6 flex-wrap">
           {/* React */}
 
-          <Button label={"React"} type={"tech-stack-btn"} varient={"react"} />
+          <Button
+            label={"React"}
+            type={"tech-stack-btn"}
+            varient={"react"}
+            onClick={() => console.log("clicked")}
+          />
 
           {/* Javascript */}
 
-          <Button label={"Javascript"} type={"tech-stack-btn"} varient={"js"} />
+          <Button
+            label={"Javascript"}
+            type={"tech-stack-btn"}
+            varient={"js"}
+            onClick={() => console.log("clicked")}
+          />
 
           {/* Next */}
 
-          <Button label={"Next.js"} type={"tech-stack-btn"} varient={"next"} />
+          <Button
+            label={"Next.js"}
+            type={"tech-stack-btn"}
+            varient={"next"}
+            onClick={() => console.log("clicked")}
+          />
 
           <div className="sm:hidden">
-            <Button label={"Redux"} type={"tech-stack-btn"} varient={"redux"} />
+            <Button
+              label={"Redux"}
+              type={"tech-stack-btn"}
+              varient={"redux"}
+              onClick={() => console.log("clicked")}
+            />
           </div>
         </div>
         {/* row 2 */}
         <div className="flex items-center justify-center gap-x-10 gap-y-6 flex-wrap md:mt-8 mt-6">
           {/* Node */}
 
-          <Button label={"Node.js"} type={"tech-stack-btn"} varient={"node"} />
+          <Button
+            label={"Node.js"}
+            type={"tech-stack-btn"}
+            varient={"node"}
+            onClick={() => console.log("clicked")}
+          />
 
           {/* Typescript */}
 
-          <Button label={"Typescript"} type={"tech-stack-btn"} varient={"ts"} />
+          <Button
+            label={"Typescript"}
+            type={"tech-stack-btn"}
+            varient={"ts"}
+            onClick={() => console.log("clicked")}
+          />
 
           {/* Express */}
 
@@ -44,20 +75,36 @@ const TechStack = () => {
             label={"Express.js"}
             type={"tech-stack-btn"}
             varient={"express"}
+            onClick={() => console.log("clicked")}
           />
 
           {/* Redux */}
-          <Button label={"Redux"} type={"tech-stack-btn"} varient={"redux"} />
+          <Button
+            label={"Redux"}
+            type={"tech-stack-btn"}
+            varient={"redux"}
+            onClick={() => console.log("clicked")}
+          />
         </div>
         {/* row 3 */}
         <div className="flex items-center justify-center gap-x-10 gap-y-6 flex-wrap md:mt-8 mt-6">
           {/* Mongo */}
 
-          <Button label={"MongoDB"} type={"tech-stack-btn"} varient={"mongo"} />
+          <Button
+            label={"MongoDB"}
+            type={"tech-stack-btn"}
+            varient={"mongo"}
+            onClick={() => console.log("clicked")}
+          />
 
           {/* git */}
 
-          <Button label={"Git"} type={"tech-stack-btn"} varient={"git"} />
+          <Button
+            label={"Git"}
+            type={"tech-stack-btn"}
+            varient={"git"}
+            onClick={() => console.log("clicked")}
+          />
 
           {/* Tailwind */}
           <div className="hidden sm:block">
@@ -65,6 +112,7 @@ const TechStack = () => {
               label={"Tailwind"}
               type={"tech-stack-btn"}
               varient={"tailwind"}
+              onClick={() => console.log("clicked")}
             />
           </div>
         </div>

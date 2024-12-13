@@ -1,8 +1,8 @@
 import React from "react";
 import { Spotlight } from "../ui/Spotlight";
 import { HeroDesc } from "./HeroDesc";
-import Image from "next/image";
-import { BackgroundGradient } from "../ui/background-gradient";
+// import Image from "next/image";
+// import { BackgroundGradient } from "../ui/background-gradient";
 import { HeroImg } from "./HeroImg";
 
 const Hero = () => {

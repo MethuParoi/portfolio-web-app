@@ -20,7 +20,7 @@ export const HeroDesc = () => {
             color: "white",
           }}
         >
-          I'm Methu Paroi{" "}
+          I&apos;m Methu Paroi{" "}
           <span
             style={{ color: "#2dd4bf", fontWeight: "bold", display: "block" }}
           >
@@ -47,8 +47,8 @@ export const HeroDesc = () => {
             With several years of experience in building efficient and scalable
             web applications, I specialize in both front-end and back-end
             development, along with performance optimization and security
-            enhancement. I’m open to new opportunities and collaborations—let’s
-            connect!
+            enhancement. I&apos;m open to new opportunities and
+            collaborations—let&apos;s connect!
           </p>
         </div>
 

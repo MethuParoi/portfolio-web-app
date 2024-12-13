@@ -2,7 +2,7 @@
 import React from "react";
 import { PinContainer } from "../ui/3d-pin";
 
-export function ProjectCard({ title, href }) {
+export function ProjectCard() {
   return (
     <div className="h-[40rem] w-full flex items-center justify-center ">
       <PinContainer
