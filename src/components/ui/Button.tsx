@@ -4,7 +4,7 @@ import { FiDownload } from "react-icons/fi";
 import { IoLogoNodejs } from "react-icons/io";
 import { IoLogoFirebase } from "react-icons/io5";
 import { MdRocketLaunch } from "react-icons/md";
-import { RiTailwindCssFill } from "react-icons/ri";
+import { RiFirebaseFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiExpress, SiMongodb, SiNextdotjs } from "react-icons/si";
 import "animate.css";
 import { TbBrandRedux } from "react-icons/tb";
@@ -32,6 +32,8 @@ const Button = ({ label, onClick, type, varient }) => {
         return <FaGitAlt className="text-2xl sm:text-3xl" />;
       case "redux":
         return <TbBrandRedux className="text-2xl sm:text-3xl" />;
+      case "firebase":
+        return <RiFirebaseFill className="text-2xl sm:text-3xl" />;
     }
   };
   switch (type) {

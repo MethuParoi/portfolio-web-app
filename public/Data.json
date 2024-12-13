@@ -7,16 +7,10 @@
       "https://i.ibb.co.com/D7FsBcy/image.png",
       "https://i.ibb.co.com/6tBfYc7/image.png"
     ],
-    "siteLink": "https://use-popcorn-ph-10.web.app/",
+    "siteLink": "https://auth-01-a13b1.firebaseapp.com/",
     "category": "recent-project",
     "shortDescription": "Eco-Adventure Experiences is a travel blog designed to inspire and guide adventure enthusiasts in exploring eco-friendly travel destinations. The platform provides detailed information on various adventure spots, including activities, accommodations, and eco-friendly practices. By promoting sustainable travel, Eco-Adventure Experiences aims to encourage responsible tourism and environmental conservation.",
-    "technologyUsed": [
-      "React",
-      "Express",
-      "MongoDB",
-      "Firebase",
-      "Tailwind CSS"
-    ],
+    "technologyUsed": ["React", "Firebase", "Tailwind CSS", "DaisyUI"],
     "keyFeatures": [
       "Detailed Adventure Spot Information: Comprehensive details on various eco-friendly adventure destinations, including activities, accommodations, and eco-friendly practices.",
 
