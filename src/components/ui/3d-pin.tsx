@@ -3,11 +3,13 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import "animate.css";
 
 export const PinContainer = ({
   children,
   title,
   href,
+  detailsLink,
   className,
   containerClassName,
 }: {
@@ -36,8 +38,8 @@ export const PinContainer = ({
       )}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      href={href || "/"}
-      target={"_blank"}
+      href={detailsLink || "/"}
+      // target={"_blank"}
     >
       <div
         style={{
@@ -47,13 +49,15 @@ export const PinContainer = ({
         className="absolute left-1/2 top-1/2 ml-[0.09375rem] mt-4 -translate-x-1/2 -translate-y-1/2 "
       >
         {/* card bg-color */}
-        <div
-          style={{
-            transform: transform,
-          }}
-          className="absolute left-1/2 p-4 top-1/2  flex justify-start items-start  rounded-2xl  shadow-[0_8px_16px_rgb(0_0_0/0.4)]  group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden bg-gradient-to-r from-[#33086788] to-[#30d0d082] "
-        >
-          <div className={cn(" relative z-50 ", className)}>{children}</div>
+        <div className="animate__animated animate__fadeInUp animate__slow ">
+          <div
+            style={{
+              transform: transform,
+            }}
+            className="absolute left-1/2 p-4 top-1/2  flex justify-start items-start  rounded-2xl  shadow-[0_8px_16px_rgb(0_0_0/0.4)]  group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden bg-gradient-to-r from-[#33086788] to-[#30d0d082] "
+          >
+            <div className={cn(" relative z-50 ", className)}>{children}</div>
+          </div>
         </div>
       </div>
       <PinPerspective title={title} href={href} />

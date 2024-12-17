@@ -12,7 +12,8 @@ import Image from "next/image";
 import Button from "../ui/Button";
 import { useEffect, useState } from "react";
 import { getProjects } from "@/lib/api-projects";
-
+import "animate.css";
+import { useRouter } from "next/navigation";
 const MyProjects = () => {
   interface Project {
     title: string;
@@ -23,6 +24,8 @@ const MyProjects = () => {
   }
 
   const [projects, setProjects] = useState<Project[]>([]);
+
+  const router = useRouter();
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -73,10 +76,13 @@ const MyProjects = () => {
         {projects?.map((project, index) => (
           <PinContainer
             key={index}
-            title={`Live Demo: ${project.title}`}
+            title={`${project.title}`}
             href={project?.siteLink}
+            detailsLink={`/project-details/${project.title
+              .replace(/ /g, "-")
+              .toLowerCase()}`}
           >
-            <div className="">
+            <div className="animate__animated animate__fadeInUp animate__slow">
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[40vh] mb-10 ">
                 <div className="h-[20vh]">
                   <Image
@@ -113,7 +119,8 @@ const MyProjects = () => {
                   type={"hero-btn"}
                   varient={"details"}
                   onClick={() => {
-                    console.log("View Details");
+                    const link = project.title.replace(/ /g, "-").toLowerCase();
+                    router.push(`/project-details/${link}`);
                   }}
                 />
               </div>
