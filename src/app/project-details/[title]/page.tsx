@@ -24,6 +24,8 @@ interface ProjectDetails {
   keyFeatures?: string[];
   technologyUsed?: string[];
   image?: string;
+  clientCodebaseLink?: string;
+  serverCodebaseLink?: string;
 }
 
 export default function ProjectDetails() {
@@ -113,7 +115,7 @@ export default function ProjectDetails() {
       <div className="flex lg:flex-row flex-col gap-y-10 lg:gap-y-0 items-start justify-around sm:m-10 xl:max-w-[1300px]">
         {/* slider */}
         <div className="lg:w-[40dvw] w-[85dvw] lg:mr-10">
-          <Slider imgSlides={projectDetails?.image} />
+          <Slider imgSlides={projectDetails?.image ?? ""} />
         </div>
         <div className="lg:w-[40dvw] w-[85dvw] lg:ml-10">
           {/* project details */}

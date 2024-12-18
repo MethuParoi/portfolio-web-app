@@ -72,7 +72,7 @@ const MyProjects = () => {
       </h1>
 
       {/* recent project grid */}
-      <div className="mt-48 mb-32 grid grid-cols-1 md:grid-cols-2 gap-x-[50px] gap-y-[200px] lg:gap-x-[180px] lg:gap-y-[300px]">
+      <div className="mt-48 mb-32 grid grid-cols-1 md:grid-cols-2 gap-x-[50px] gap-y-[300px] sm:gap-y-[200px] lg:gap-x-[180px] lg:gap-y-[300px]">
         {projects?.map((project, index) => (
           <PinContainer
             key={index}

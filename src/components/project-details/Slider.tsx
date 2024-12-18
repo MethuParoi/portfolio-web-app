@@ -3,7 +3,11 @@ import React, { useEffect, useState } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import Loader from "@/components/ui/Loader/Loader";
 
-const Slider = ({ imgSlides }) => {
+interface SliderProps {
+  imgSlides: string;
+}
+
+const Slider: React.FC<SliderProps> = ({ imgSlides }) => {
   const [page, setPage] = useState(0);
   const [mobilePage, setMobilePage] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -87,34 +91,36 @@ const Slider = ({ imgSlides }) => {
           </div>
           {/* for mobile device */}
           {/* <link rel="preload" as="image" href={displayedSlides[0].src} /> */}
-          <div className="block w-full md:hidden">
-            <Image
-              src={displayedSlides[page]}
-              alt={`Slide ${mobilePage + 1}`}
-              fill={true}
-              objectFit="cover" // Make sure the image fills the mobile screen without cropping
-              className=" inset-0 rounded-lg h-[250px]"
-              loading="lazy"
-              sizes="(max-width: 768px) 100vw, 50vw, height: 350px"
-            />
-            <div
-              onClick={handlePrevPage}
-              className="z-10 absolute bottom-1/2 left-4" // Adjust button position for mobile
-            >
-              <button className="bg-gray-800 bg-opacity-60 text-white p-2 rounded-full flex justify-center items-center">
-                <FaAngleLeft size={13} />
-              </button>
-            </div>
+          {isMobile && (
+            <div className="block w-full md:hidden">
+              <Image
+                src={displayedSlides[page]}
+                alt={`Slide ${mobilePage + 1}`}
+                fill={true}
+                objectFit="cover" // Make sure the image fills the mobile screen without cropping
+                className=" inset-0 rounded-lg h-[250px]"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 50vw, height: 350px"
+              />
+              <div
+                onClick={handlePrevPage}
+                className="z-10 absolute bottom-1/2 left-4" // Adjust button position for mobile
+              >
+                <button className="bg-gray-800 bg-opacity-60 text-white p-2 rounded-full flex justify-center items-center">
+                  <FaAngleLeft size={13} />
+                </button>
+              </div>
 
-            <div
-              onClick={handleNextPage}
-              className="z-10 absolute bottom-1/2 right-4" // Adjust button position for mobile
-            >
-              <button className="bg-gray-800 bg-opacity-60 text-white p-2 rounded-full flex justify-center items-center">
-                <FaAngleRight size={13} />
-              </button>
+              <div
+                onClick={handleNextPage}
+                className="z-10 absolute bottom-1/2 right-4" // Adjust button position for mobile
+              >
+                <button className="bg-gray-800 bg-opacity-60 text-white p-2 rounded-full flex justify-center items-center">
+                  <FaAngleRight size={13} />
+                </button>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </section>

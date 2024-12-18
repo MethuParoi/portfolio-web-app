@@ -19,7 +19,7 @@ import { TbBrandRedux } from "react-icons/tb";
 interface ButtonProps {
   label: string;
   onClick: () => void;
-  type: "hero-btn" | "tech-stack-btn";
+  type: "hero-btn" | "tech-stack-btn" | "details-btn";
   varient: string;
 }
 

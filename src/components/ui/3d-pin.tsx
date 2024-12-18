@@ -17,6 +17,7 @@ export const PinContainer = ({
   title?: string;
   href?: string;
   className?: string;
+  detailsLink?: string;
   containerClassName?: string;
 }) => {
   const [transform, setTransform] = useState(
