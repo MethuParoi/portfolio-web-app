@@ -30,7 +30,8 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             {/* <Navbar /> */}
-            {children}
+            <div className="flex-grow">{children}</div>
+
             <Footer />
           </ThemeProvider>
         </main>

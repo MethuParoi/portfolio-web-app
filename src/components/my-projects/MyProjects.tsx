@@ -14,6 +14,7 @@ import { useEffect, useState } from "react";
 import { getProjects } from "@/lib/api-projects";
 import "animate.css";
 import { useRouter } from "next/navigation";
+
 const MyProjects = () => {
   interface Project {
     title: string;
