@@ -8,13 +8,13 @@ export const HeroDesc = () => {
   const router = useRouter();
   return (
     <div className=" max-w-2xl animate__animated animate__fadeInLeft animate__slow">
-      <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-[-30px]">
+      <h1 className="text-4xl lg:text-5xl font-bold leading-tight mt-5 sm:mt-0 mb-[-30px]">
         Hello <span className=" text-teal-400">There!</span>
       </h1>
       <div className=" text-2xl lg:text-3xl font-medium text-gray-700 ">
         <h1
           style={{
-            paddingTop: "5rem",
+            paddingTop: "3.5rem",
             margin: "auto 0",
             fontWeight: 400,
             color: "white",
