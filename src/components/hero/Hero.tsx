@@ -5,6 +5,7 @@ import { HeroDesc } from "./HeroDesc";
 // import { BackgroundGradient } from "../ui/background-gradient";
 import { HeroImg } from "./HeroImg";
 
+
 const Hero = () => {
   return (
     <div className=" w-[100dvw] rounded-md flex md:items-center md:justify-center antialiased  relative overflow-hidden">

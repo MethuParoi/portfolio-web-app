@@ -3,10 +3,47 @@
 import Button from "../ui/Button";
 import LazyLoad from "react-lazyload";
 import "animate.css";
+import Link from "next/link";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 
 const TechStack = () => {
   return (
     <div className="mb-14 md:mb-0 mt-4 md:mt-0 md:my-16 ">
+      {/* social links */}
+      <div className="flex items-center justify-center gap-x-4 mb-6">
+        <li className="flex text-secondary hover:text-accent active:text-accent-dark items-center mb-2 animate__animated animate__fadeInUp animate__slow">
+          {" "}
+          <Link
+            href="https://www.linkedin.com/in/methu-paroi/"
+            className="ml-2"
+            target="_blank"
+          >
+            <FaLinkedin className="h-8 w-8 text-teal-400 hover:text-teal-600" />
+          </Link>
+        </li>
+        <li className="flex text-secondary hover:text-accent active:text-accent-dark items-center mb-2 animate__animated animate__fadeInUp animate__slow">
+          {" "}
+          <Link
+            href="https://github.com/MethuParoi"
+            className="ml-2"
+            target="_blank"
+          >
+            <FaGithubSquare className="h-8 w-8 text-teal-400 hover:text-teal-600" />
+          </Link>
+        </li>
+
+        <li className="flex text-secondary hover:text-accent active:text-accent-dark items-center mb-2 animate__animated animate__fadeInUp animate__slow">
+          {" "}
+          <Link
+            href="https://x.com/methu_paroi"
+            className="ml-2"
+            target="_blank"
+          >
+            <FaSquareXTwitter className="h-8 w-8 text-teal-400 hover:text-teal-600" />
+          </Link>
+        </li>
+      </div>
       <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-[-30px] text-center animate__animated animate__fadeInUp animate__slow">
         My <span className=" text-teal-400">Tech Stack</span>
       </h1>

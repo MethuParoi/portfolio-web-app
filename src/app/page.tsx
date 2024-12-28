@@ -1,3 +1,4 @@
+import GetInTouch from "@/components/get-in-touch/GetInTouch";
 import Hero from "@/components/hero/Hero";
 import MyClients from "@/components/my-clients/MyClients";
 import MyProjects from "@/components/my-projects/MyProjects";
@@ -41,6 +42,7 @@ export default function Home() {
       <TechStack />
       <MyProjects />
       <MyClients />
+      <GetInTouch />
     </main>
   );
 }

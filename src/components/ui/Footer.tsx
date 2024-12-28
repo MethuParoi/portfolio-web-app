@@ -11,6 +11,7 @@ import {
   RiMapPinFill,
 } from "react-icons/ri";
 import { FaFacebook, FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -92,7 +93,7 @@ const Footer = () => {
               <li className="flex text-secondary hover:text-accent active:text-accent-dark items-center mb-2">
                 <FaLinkedin />{" "}
                 <Link
-                  href="https://www.linkedin.com/in/methu-p-6aa311204/"
+                  href="https://www.linkedin.com/in/methu-paroi/"
                   className="ml-2"
                   target="_blank"
                 >
@@ -111,7 +112,7 @@ const Footer = () => {
               </li>
 
               <li className="flex text-secondary hover:text-accent active:text-accent-dark items-center mb-2">
-                <RiTwitterFill />{" "}
+                <FaSquareXTwitter />{" "}
                 <Link
                   href="https://x.com/methu_paroi"
                   className="ml-2"
