@@ -33,7 +33,7 @@ export const PinContainer = ({
   };
 
   return (
-    <LazyLoad height={200} debounce={200} once>
+    <LazyLoad height={200} debounce={50} once>
       <Link
         className={cn(
           "relative group/pin z-50  cursor-pointer ",

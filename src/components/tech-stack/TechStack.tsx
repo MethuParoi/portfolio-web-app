@@ -15,7 +15,7 @@ const TechStack = () => {
         {/* row 1 */}
         <div className="flex items-center justify-center gap-x-10 gap-y-6 flex-wrap">
           {/* React */}
-          <LazyLoad height={200} debounce={200} once>
+          <LazyLoad height={200} debounce={50} once>
             <Button
               label={"React"}
               type={"tech-stack-btn"}
@@ -25,7 +25,7 @@ const TechStack = () => {
           </LazyLoad>
 
           {/* Javascript */}
-          <LazyLoad height={200} debounce={200} once>
+          <LazyLoad height={200} debounce={50} once>
             <Button
               label={"Javascript"}
               type={"tech-stack-btn"}
@@ -35,7 +35,7 @@ const TechStack = () => {
           </LazyLoad>
 
           {/* Next */}
-          <LazyLoad height={200} debounce={200} once>
+          <LazyLoad height={200} debounce={50} once>
             <Button
               label={"Next.js"}
               type={"tech-stack-btn"}
@@ -44,7 +44,7 @@ const TechStack = () => {
             />
           </LazyLoad>
           {/* redux */}
-          <LazyLoad height={200} debounce={200} once>
+          <LazyLoad height={200} debounce={50} once>
             <div className="sm:hidden">
               <Button
                 label={"Redux"}
@@ -58,7 +58,7 @@ const TechStack = () => {
         {/* row 2 */}
         <div className="flex items-center justify-center gap-x-10 gap-y-6 flex-wrap md:mt-8 mt-6">
           {/* Node */}
-          <LazyLoad height={200} debounce={200} once>
+          <LazyLoad height={200} debounce={50} once>
             <Button
               label={"Node.js"}
               type={"tech-stack-btn"}
@@ -68,7 +68,7 @@ const TechStack = () => {
           </LazyLoad>
 
           {/* Typescript */}
-          <LazyLoad height={200} debounce={200} once>
+          <LazyLoad height={200} debounce={50} once>
             <Button
               label={"Typescript"}
               type={"tech-stack-btn"}
@@ -78,7 +78,7 @@ const TechStack = () => {
           </LazyLoad>
 
           {/* Express */}
-          <LazyLoad height={200} debounce={200} once>
+          <LazyLoad height={200} debounce={50} once>
             <Button
               label={"Express.js"}
               type={"tech-stack-btn"}
@@ -88,7 +88,7 @@ const TechStack = () => {
           </LazyLoad>
 
           {/* Redux */}
-          <LazyLoad height={200} debounce={200} once>
+          <LazyLoad height={200} debounce={50} once>
             <Button
               label={"Redux"}
               type={"tech-stack-btn"}
@@ -100,7 +100,7 @@ const TechStack = () => {
         {/* row 3 */}
         <div className="flex items-center justify-center gap-x-10 gap-y-6 flex-wrap md:mt-8 mt-6">
           {/* Mongo */}
-          <LazyLoad height={200} debounce={200} once>
+          <LazyLoad height={200} debounce={50} once>
             <Button
               label={"MongoDB"}
               type={"tech-stack-btn"}
@@ -110,7 +110,7 @@ const TechStack = () => {
           </LazyLoad>
 
           {/* git */}
-          <LazyLoad height={200} debounce={200} once>
+          <LazyLoad height={200} debounce={50} once>
             <Button
               label={"Git"}
               type={"tech-stack-btn"}
@@ -120,7 +120,7 @@ const TechStack = () => {
           </LazyLoad>
 
           {/* Tailwind */}
-          <LazyLoad height={200} debounce={200} once>
+          <LazyLoad height={200} debounce={50} once>
             <div className="hidden sm:block">
               <Button
                 label={"Tailwind"}

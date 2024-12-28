@@ -1,4 +1,5 @@
 import Hero from "@/components/hero/Hero";
+import MyClients from "@/components/my-clients/MyClients";
 import MyProjects from "@/components/my-projects/MyProjects";
 import TechStack from "@/components/tech-stack/TechStack";
 import { FloatingNav } from "@/components/ui/floating-navbar";
@@ -39,6 +40,7 @@ export default function Home() {
       <Hero />
       <TechStack />
       <MyProjects />
+      <MyClients />
     </main>
   );
 }
