@@ -10,7 +10,7 @@ const MyClients = () => {
       </h1>
 
       <div className=" flex flex-col items-center">
-        <div className="mt-20 h-[50vh] md:h-[30rem] rounded-md flex flex-col antialiased items-center relative overflow-hidden">
+        <div className="mt-20 h-[25vh] md:h-[20rem] rounded-md flex flex-col antialiased items-center relative overflow-hidden">
           <InfiniteMovingCards
             items={testimonials}
             direction="right"
