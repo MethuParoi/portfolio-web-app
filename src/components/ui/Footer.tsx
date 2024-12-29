@@ -4,12 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../../../public/logo/logo-removebg.png";
-import {
-  RiTwitterFill,
-  RiPhoneFill,
-  RiMailFill,
-  RiMapPinFill,
-} from "react-icons/ri";
+import { RiPhoneFill, RiMailFill, RiMapPinFill } from "react-icons/ri";
 import { FaFacebook, FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 

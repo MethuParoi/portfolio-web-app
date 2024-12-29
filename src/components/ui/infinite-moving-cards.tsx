@@ -19,6 +19,7 @@ export const InfiniteMovingCards = ({
     quote: string;
     name: string;
     title: string;
+    id: number;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -85,14 +86,14 @@ export const InfiniteMovingCards = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          " flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
+          " flex min-w-full shrink-0 gap-12 py-4 w-max flex-nowrap",
           start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
         {items.map((item, idx) => (
           <li
-            className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-teal-400 px-8 py-6 md:w-[450px]"
+            className="w-[350px] max-w-full relative rounded-2xl border flex-shrink-0 border-teal-400 px-8 py-6 md:w-[450px]"
             style={{
               background: "rgb(4,7,29)",
               backgroundColor:

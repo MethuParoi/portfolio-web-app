@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useRef } from "react";
 import Button from "../ui/Button";
-import { IoIosMail, IoIosCall } from "react-icons/io";
 import { RiMailFill, RiMapPinFill, RiPhoneFill } from "react-icons/ri";
 import Link from "next/link";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
@@ -39,7 +38,7 @@ const GetInTouch = () => {
         );
       }
     } catch (error) {
-      setFormStatus("error");
+      setFormStatus(String(error));
       setFormMessage(
         "There was an issue sending the message. Please try again."
       );
@@ -73,8 +72,9 @@ const GetInTouch = () => {
                       with me, feel free to reach out through the social media
                       links provided below. Alternatively, you can send me a
                       direct message, and I will respond to you via email as
-                      soon as possible. I'm looking forward to hearing from you
-                      and discussing potential opportunities to work together.
+                      soon as possible. I&apos;m looking forward to hearing from
+                      you and discussing potential opportunities to work
+                      together.
                     </p>
                   </div>
                   <div className="mb-4 ml-2">
@@ -160,7 +160,7 @@ const GetInTouch = () => {
                 <input
                   type="hidden"
                   name="access_key"
-                  value={process.env.WEB3_FORMS_ACCESS_KEY}
+                  value={process.env.NEXT_PUBLIC_WEB3_FORMS_ACCESS_KEY}
                 />
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div>
@@ -221,7 +221,7 @@ const GetInTouch = () => {
                 />
                 {formStatus && (
                   <p
-                    className={`mt-4 text-sm ${
+                    className={` text-lg ${
                       formStatus === "success"
                         ? "text-green-500"
                         : "text-red-500"
