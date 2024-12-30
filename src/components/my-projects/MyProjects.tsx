@@ -67,7 +67,7 @@ const MyProjects = () => {
   };
 
   return (
-    <div className="mb-14 md:mb-0 mt-4 md:mt-0 md:py-16 ">
+    <div id="my-projects" className="mb-14 md:mb-0 mt-4 md:mt-0 md:py-16 ">
       <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-[-30px] text-center animate__animated animate__fadeInUp animate__slow">
         Recent <span className=" text-teal-400">Projects</span>
       </h1>

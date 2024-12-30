@@ -55,14 +55,22 @@ export const HeroDesc = () => {
         <div className="mt-8 flex flex-row gap-4 justify-start">
           <Button
             label={"See my Projects"}
-            onClick={() => router.push("/all-projects")}
+            onClick={() => {
+              const element = document.getElementById("my-projects");
+              if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
             type={"hero-btn"}
             varient={"rocket"}
           />
           <Button
             label={"Download Resume"}
             onClick={() => {
-              console.log("clicked");
+              window.open(
+                "https://drive.google.com/file/d/1rXQSaa_1pRTRS41Zy4fRgd38FI4IknCa/view?usp=sharing",
+                "_blank"
+              );
             }}
             type={"hero-btn"}
             varient={"download"}

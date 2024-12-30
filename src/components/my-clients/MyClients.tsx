@@ -6,11 +6,13 @@ const MyClients = () => {
     <div className="pb-20 md:mb-0 md:mt-0 md:my-16 pt-8">
       <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-[-30px] text-center animate__animated animate__fadeInUp animate__slow">
         Kind Words from{" "}
-        <span className=" text-teal-400">Satisfied Clients</span>
+        <span className=" text-teal-400 block md:inline">
+          Satisfied Clients
+        </span>
       </h1>
 
       <div className=" flex flex-col items-center">
-        <div className="mt-20 h-[25vh] md:h-[20rem] rounded-md flex flex-col antialiased items-center relative overflow-hidden">
+        <div className="mt-20 h-[270px] md:h-[20rem] rounded-md flex flex-col antialiased items-center relative overflow-hidden">
           <InfiniteMovingCards
             items={testimonials}
             direction="right"

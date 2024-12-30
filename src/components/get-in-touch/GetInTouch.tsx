@@ -63,7 +63,9 @@ const GetInTouch = () => {
 
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 md:grid-cols-2 hi">
             <div className="bg-primary bg-opacity-80 backdrop-blur-sm text-gray-300 p-8 rounded-lg animate__animated animate__fadeInLeft animate__slow">
-              <h3 className="text-2xl font-bold mb-4">Reach Out</h3>
+              <h3 className="text-2xl font-bold mb-4 hidden md:block">
+                Reach Out
+              </h3>
               <div className="flex flex-col justify-around h-full">
                 <div className="flex flex-col justify-center h-full">
                   <div className="mb-6">
