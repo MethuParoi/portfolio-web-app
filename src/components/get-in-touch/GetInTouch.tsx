@@ -53,6 +53,7 @@ const GetInTouch = () => {
 
   return (
     <main
+      id="get-in-touch"
       className={`h-full flex justify-center items-center px-5 md:px-0 max-w-[1300px]`}
     >
       <div className="flex flex-col md:flex-row justify-center items-center backdrop-blur-[2px] w-full">

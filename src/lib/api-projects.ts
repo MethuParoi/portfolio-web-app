@@ -4,7 +4,8 @@ export async function getProjects() {
   const { data, error } = await supabase
     .from("recent_projects")
     .select("*")
-    .eq("category", "recent-project");
+    .eq("category", "recent-project")
+    .order("id", { ascending: true });
   if (error) {
     console.error(error);
     throw new Error("An error occurred while fetching projects");

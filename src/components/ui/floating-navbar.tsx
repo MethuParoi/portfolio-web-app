@@ -7,7 +7,6 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 
 export const FloatingNav = ({
   navItems,
@@ -15,7 +14,7 @@ export const FloatingNav = ({
 }: {
   navItems: {
     name: string;
-    link: string;
+    onClick: () => void;
     icon?: JSX.Element;
   }[];
   className?: string;
@@ -65,22 +64,25 @@ export const FloatingNav = ({
             navItem: { name: string; link: string; icon?: JSX.Element },
             idx: number
           ) => (
-            <Link
+            <button
               key={`link=${idx}`}
-              href={navItem.link}
+              onClick={navItem.onClick}
               className={cn(
                 "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
               )}
             >
               <span className="block sm:hidden">{navItem.icon}</span>
               <span className="hidden sm:block text-sm">{navItem.name}</span>
-            </Link>
+            </button>
           )
         )}
         <button
           className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-white dark:text-white px-4 py-2 rounded-full"
           onClick={() => {
-            console.log("Login button clicked");
+            window.open(
+              "https://drive.google.com/file/d/1rXQSaa_1pRTRS41Zy4fRgd38FI4IknCa/view?usp=sharing",
+              "_blank"
+            );
           }}
         >
           <span>Resume</span>
