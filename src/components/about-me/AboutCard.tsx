@@ -43,7 +43,7 @@ const AboutCard: React.FC<AboutCardProps> = ({
       >
         <h3 className="text-xl font-bold text-neutral-200">{title}</h3>
         <div className="flex flex-col gap-y-4 pt-4">
-          <div className="flex items-center gap-x-4 text-neutral-400">
+          <div className="flex items-start gap-x-4 text-neutral-400">
             <FaUniversity className="text-2xl text-teal-400" />
             <p className="text-lg text-neutral-400">{institute}</p>
           </div>

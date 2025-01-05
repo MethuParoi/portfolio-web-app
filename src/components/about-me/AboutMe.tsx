@@ -10,7 +10,7 @@ import AboutCard from "./AboutCard";
 
 const AboutMe = () => {
   return (
-    <section className="pb-16 pt-10">
+    <section className="pb-16 pt-10 sm:pt-20">
       <h1 className="text-4xl lg:text-5xl font-bold leading-tight text-center mb-12">
         About <span className="text-teal-400">Me</span>
       </h1>
