@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { FaUniversity } from "react-icons/fa";
-import { FaGoogleScholar } from "react-icons/fa6";
-import { SiSemanticscholar } from "react-icons/si";
+
 import kiit_img from "../../../public/kiit.jpg";
 import tech from "../../../public/exp1.svg";
 import flexible from "../../../public/b5.svg";

@@ -1,10 +1,26 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 import { FaUniversity } from "react-icons/fa";
 import { FaGoogleScholar } from "react-icons/fa6";
 import { SiSemanticscholar } from "react-icons/si";
 
-const AboutCard = ({ img, title, institute, desc1, desc2, id }) => {
+interface AboutCardProps {
+  img: string | StaticImageData;
+  title: string;
+  institute: string;
+  desc1: string;
+  desc2: string;
+  id: number;
+}
+
+const AboutCard: React.FC<AboutCardProps> = ({
+  img,
+  title,
+  institute,
+  desc1,
+  desc2,
+  id,
+}) => {
   return (
     <div
       className="md:col-span-2 flex flex-col sm:flex-row justify-between items-center sm:items-start  p-6 animate__animated animate__fadeInUp animate__slow h-[80vh] sm:h-[300px]"
