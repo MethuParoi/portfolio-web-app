@@ -15,7 +15,7 @@ export default function Home() {
   const router = useRouter();
   return (
     <main className=" relative flex flex-col justify-start items-center overflow-hidden mx-auto min-h-screen ">
-      <FloatingNav
+      {/* <FloatingNav
         navItems={[
           {
             name: "Home",
@@ -53,7 +53,7 @@ export default function Home() {
             ),
           },
         ]}
-      />
+      /> */}
       <Hero />
       <TechStack />
       <MyProjects />

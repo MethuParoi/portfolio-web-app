@@ -81,7 +81,7 @@ export default function ProjectDetails() {
   };
 
   return (
-    <div className=" flex flex-col justify-center items-center gap-y-10 md:gap-y-0 px-3 lg:px-0 pt-4 md:pt-10 xl:max-w-[1300px] pb-14 mx-auto">
+    <div className=" flex flex-col justify-center items-center gap-y-10 md:gap-y-0 px-3 lg:px-0 pt-20 md:pt-24 xl:max-w-[1300px] pb-14 mx-auto">
       {/* title & short description */}
       <div className="w-[85dvw]">
         <button
