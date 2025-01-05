@@ -23,7 +23,7 @@ const AboutCard: React.FC<AboutCardProps> = ({
 }) => {
   return (
     <div
-      className="md:col-span-2 flex flex-col sm:flex-row justify-between items-center sm:items-start  p-6 animate__animated animate__fadeInUp animate__slow h-[80vh] sm:h-[300px]"
+      className="md:col-span-2 flex flex-col sm:flex-row justify-between items-start gap-y-2 sm:items-start  p-6 animate__animated animate__fadeInUp animate__slow h-[500px] sm:h-[300px]"
       style={{
         background:
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
@@ -35,10 +35,12 @@ const AboutCard: React.FC<AboutCardProps> = ({
         objectFit="cover"
         width={400}
         height={100}
-        className="w-[320px] sm:w-[400px] h-[250px] rounded-lg border-2 border-teal-400"
+        className="w-[320px] sm:w-[300px] md:w-[280px] xl:w-[400px] h-[250px] rounded-lg border-2 border-teal-400"
       />
 
-      <div className={`flex flex-col items-start space-y-2  ml-10 `}>
+      <div
+        className={`flex flex-col items-start space-y-2  sm:ml-10 md:w-[350px]`}
+      >
         <h3 className="text-xl font-bold text-neutral-200">{title}</h3>
         <div className="flex flex-col gap-y-4 pt-4">
           <div className="flex items-center gap-x-4 text-neutral-400">
