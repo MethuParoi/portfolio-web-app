@@ -7,6 +7,7 @@ import React, { useEffect, useState } from "react";
 import nixzo from "../../../public/clients/logo-bbg.png";
 import skleather from "../../../public/clients/skLeather.png";
 import saafak from "../../../public/clients/saafak.png";
+import hygieneplusbd from "../../../public/clients/hygiene.png";
 
 export const InfiniteMovingCards = ({
   items,
@@ -108,9 +109,17 @@ export const InfiniteMovingCards = ({
               ></div>
               <div className="mb-4">
                 <Image
-                  src={item.id == 1 ? nixzo : item.id == 2 ? skleather : saafak}
+                  src={
+                    item.id == 1
+                      ? nixzo
+                      : item.id == 2
+                      ? hygieneplusbd
+                      : item.id == 3
+                      ? skleather
+                      : saafak
+                  }
                   alt="Nixzo"
-                  className="md:w-20 w-14 md:h-20  h-14 "
+                  className="md:w-20 w-14 h-14 "
                 />
               </div>
               <span className=" relative z-20 text-md md:text-xl font-medium leading-[1.6] text-gray-100">

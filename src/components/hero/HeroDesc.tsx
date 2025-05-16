@@ -68,7 +68,7 @@ export const HeroDesc = () => {
             label={"Download Resume"}
             onClick={() => {
               window.open(
-                "https://drive.google.com/file/d/1rXQSaa_1pRTRS41Zy4fRgd38FI4IknCa/view?usp=sharing",
+                "https://drive.google.com/file/d/1uI7QEo1dXNt5MJAyaqoo7spl3ZtClhHK/view?usp=sharing",
                 "_blank"
               );
             }}
