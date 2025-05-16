@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from "next/image";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaUniversity } from "react-icons/fa";
 import { FaGoogleScholar } from "react-icons/fa6";
 import { SiSemanticscholar } from "react-icons/si";
@@ -21,9 +21,37 @@ const AboutCard: React.FC<AboutCardProps> = ({
   desc2,
   id,
 }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.2 } // Trigger when 20% of the element is visible
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => {
+      if (cardRef.current) {
+        observer.unobserve(cardRef.current);
+      }
+    };
+  }, []);
   return (
     <div
-      className="md:col-span-2 flex flex-col sm:flex-row justify-between items-start gap-y-2 sm:items-start  p-6 animate__animated animate__fadeInUp animate__slow h-[500px] sm:h-[300px]"
+      ref={cardRef}
+      className={`md:col-span-2 flex flex-col sm:flex-row justify-between items-start gap-y-2 sm:items-start p-6 h-[500px] sm:h-[300px] ${
+        isVisible ? "animate__animated animate__fadeInLeft animate__slow" : ""
+      }`}
       style={{
         background:
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",

@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
-import kiit_img from "../../../public/kiit.jpg";
+import kiit_img from "../../../public/kiit.webp";
 import tech from "../../../public/exp1.svg";
 import flexible from "../../../public/b5.svg";
 import dcc from "../../../public/Dhaka_city_college.jpg";
@@ -9,6 +9,31 @@ import "animate.css";
 import AboutCard from "./AboutCard";
 
 const AboutMe = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.2 } // Trigger when 20% of the element is visible
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => {
+      if (cardRef.current) {
+        observer.unobserve(cardRef.current);
+      }
+    };
+  }, []);
   return (
     <section className="pb-16 pt-10 sm:pt-20">
       <h1 className="text-4xl lg:text-5xl font-bold leading-tight text-center mb-12">
@@ -22,16 +47,21 @@ const AboutMe = () => {
         {/* kiit */}
         <AboutCard
           img={kiit_img}
-          title="Pursuing my undergrad in Computer Science and Engineering"
+          title="Completed Bachelor’s degree in Computer Science and Engineering."
           institute="KIIT, Bhubaneswar, India"
           desc1="Full Funded SII Scholarship by the Ministry of Education, India"
-          desc2="Final Semester ongoing"
+          desc2="batch of 2025"
           id={1}
         />
 
         {/* tech enthusiast */}
         <div
-          className=" flex flex-col justify-between items-center p-6 h-[300px] my-5 sm:my-0"
+          ref={cardRef}
+          className={`flex flex-col justify-between items-center p-6 h-[300px] my-5 sm:my-0 ${
+            isVisible
+              ? "animate__animated animate__fadeInRight animate__slow"
+              : ""
+          }`}
           style={{
             background:
               "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
@@ -62,10 +92,15 @@ const AboutMe = () => {
           id={2}
         />
 
-        {/* flexible */}
+        {/* flexible card*/}
 
         <div
-          className="flex flex-col justify-between items-center p-6 h-[300px]"
+          ref={cardRef}
+          className={`flex flex-col justify-between items-center p-6 h-[300px] ${
+            isVisible
+              ? "animate__animated animate__fadeInRight animate__slow"
+              : ""
+          }`}
           style={{
             background:
               "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
