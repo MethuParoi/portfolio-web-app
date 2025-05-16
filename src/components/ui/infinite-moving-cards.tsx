@@ -4,10 +4,9 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import nixzo from "../../../public/clients/logo-bbg.png";
-import skleather from "../../../public/clients/skLeather.png";
-import saafak from "../../../public/clients/saafak.png";
-import hygieneplusbd from "../../../public/clients/hygiene.png";
+import contribution from "../../../public/my-contributions/contribution.png";
+import stats2 from "../../../public/my-contributions/stats2.png";
+import stats1 from "../../../public/my-contributions/stats1.png";
 
 export const InfiniteMovingCards = ({
   items,
@@ -17,8 +16,7 @@ export const InfiniteMovingCards = ({
   className,
 }: {
   items: {
-    quote: string;
-    name: string;
+    description: string;
     title: string;
     id: number;
   }[];
@@ -94,7 +92,7 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="w-[350px] max-w-full relative rounded-2xl border flex-shrink-0 border-teal-400 px-8 py-6 md:w-[450px]"
+            className="w-[350px] max-w-full relative rounded-2xl border flex-shrink-0 border-teal-400 px-8 py-6 md:w-[450px] h-[250px]"
             style={{
               background: "rgb(4,7,29)",
               backgroundColor:
@@ -105,27 +103,21 @@ export const InfiniteMovingCards = ({
             <blockquote>
               <div
                 aria-hidden="true"
-                className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
+                className={`user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]`}
               ></div>
               <div className="mb-4">
                 <Image
                   src={
-                    item.id == 1
-                      ? nixzo
-                      : item.id == 2
-                      ? hygieneplusbd
-                      : item.id == 3
-                      ? skleather
-                      : saafak
+                    item.id == 1 ? stats2 : item.id == 2 ? stats1 : contribution
                   }
                   alt="Nixzo"
-                  className="md:w-20 w-14 h-14 "
+                  className="w-[100%] h-[120px]  rounded-md object-contain object-center"
                 />
               </div>
-              <span className=" relative z-20 text-md md:text-xl font-medium leading-[1.6] text-gray-100">
-                {item.quote}
+              <span className=" relative z-20 text-md md:text-lg font-medium leading-[1.6] text-gray-100">
+                {item.description}
               </span>
-              <div className="relative z-20 mt-6 flex flex-row items-center">
+              {/* <div className="relative z-20 mt-6 flex flex-row items-center">
                 <span className="flex flex-col gap-1">
                   <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
                     {item.name}
@@ -134,7 +126,7 @@ export const InfiniteMovingCards = ({
                     {item.title}
                   </span>
                 </span>
-              </div>
+              </div> */}
             </blockquote>
           </li>
         ))}

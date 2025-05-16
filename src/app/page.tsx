@@ -3,7 +3,7 @@
 import AboutMe from "@/components/about-me/AboutMe";
 import GetInTouch from "@/components/get-in-touch/GetInTouch";
 import Hero from "@/components/hero/Hero";
-import MyClients from "@/components/my-clients/MyClients";
+import MyContributions from "@/components/my-contributions/MyContributions";
 import MyProjects from "@/components/my-projects/MyProjects";
 import TechStack from "@/components/tech-stack/TechStack";
 
@@ -14,7 +14,7 @@ export default function Home() {
       <TechStack />
       <AboutMe />
       <MyProjects />
-      <MyClients />
+      <MyContributions />
       <GetInTouch />
     </main>
   );

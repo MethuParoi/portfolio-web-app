@@ -1,13 +1,13 @@
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 import { testimonials } from "@/data/testimonials";
 
-const MyClients = () => {
+const MyContributions = () => {
   return (
     <div className="pb-20 md:mb-0 md:mt-0 md:my-16 pt-8">
       <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-[-30px] text-center animate__animated animate__fadeInUp animate__slow">
-        Kind Words from{" "}
+        Open‑Source &{" "}
         <span className=" text-teal-400 block md:inline">
-          Satisfied Clients
+          Community Contributions
         </span>
       </h1>
 
@@ -24,4 +24,4 @@ const MyClients = () => {
   );
 };
 
-export default MyClients;
+export default MyContributions;
